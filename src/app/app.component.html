@@ -1,0 +1,74 @@
+<div class="custom-grid">
+    <aside class="custom-sidebar">
+        <div class="sidebar-height d-flex flex-column flex-shrink-0 pt-2 text-white dext-theme-color">
+            <a style="padding-left: 40px; padding-top: 5px;" href="/" class="d-flex align-items-center text-white text-decoration-none">
+                <img src="../assets/dextropy-logo.png" alt="" width="170" height="50">
+                <!-- <span class="fs-4">dextropy</span> -->
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto mt-1">
+                <li class="nav-item mt-2 mb-2">
+                    <a routerLink="/dashboard" routerLinkActive="active" class="nav-link custom-nav-list p-3" aria-current="page">
+                        <i class="bi-circle me-2"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item mt-2 mb-2">
+                    <a routerLink="/rfqs" routerLinkActive="active" class="nav-link custom-nav-list p-3" aria-current="page">
+                        <i class="bi-circle me-2"></i> All RFQs
+                    </a>
+                </li>
+                <li class="nav-item mt-2 mb-2">
+                    <a routerLink="/orders" routerLinkActive="active" class="nav-link custom-nav-list p-3" aria-current="page">
+                        <i class="bi-cart me-2"></i> Orders
+                    </a>
+                </li>
+                <li class="nav-item mt-2 mb-2">
+                    <a routerLink="/message" routerLinkActive="active" class="nav-link custom-nav-list p-3">
+                        <i class="bi-inbox me-2"></i> Messaging
+                    </a>
+                </li>
+                <li class="nav-item mt-2 mb-2">
+                    <a routerLink="/discover" routerLinkActive="active" class="nav-link custom-nav-list p-3">
+                        <i class="bi-search me-2"></i> Discovery
+                    </a>
+                </li>
+            </ul>
+
+
+            <div class="dropdown">
+                <ul class="company-tab bg-black-grey">
+                    <li>
+                        <a routerLink="/profile" routerLinkActive="active" class="nav-link text-white p-3">
+                            <i class="bi-circle me-2"></i>
+                            <span class="white-color">Company</span>
+                        </a>
+                    </li>
+                </ul>
+                <div href="#" class="d-flex align-items-center text-white p-3">
+                    <i class="bi bi-gear me-2"></i>
+                    <div ngbDropdown>
+                        <a href="#" class="me-2 dropdown-toggle text-white text-decoration-none" id="notifications" ngbDropdownToggle>
+                            <i class="bi bi-bell"></i>
+                        </a>
+                        <ul ngbDropdownMenu aria-labelledby="notifications" class="dropdown-menu dropdown-menu-dark text-small shadow">
+                            <li ngbDropdownItem><a class="dropdown-item" href="#">New project...</a></li>
+                            <li ngbDropdownItem><a class="dropdown-item" href="#">Settings</a></li>
+                            <li ngbDropdownItem><a class="dropdown-item" href="#">Profile</a></li>
+                            <li ngbDropdownItem>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li ngbDropdownItem><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                    
+
+                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <span class="white-color" style="font-size: .7rem;">Pani's Squeeze<br>User role</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main class="custom-content">
+        <router-outlet></router-outlet>
+    </main>
+</div>

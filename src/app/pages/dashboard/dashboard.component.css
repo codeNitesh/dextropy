@@ -1,0 +1,126 @@
+.text-helper-muted {
+    font-size: x-small !important;
+    font-weight: 250 !important;
+}
+
+
+.card-boxes .card:hover{
+    /* position: absolute; */
+    
+    background: #e0e0e0;
+    box-shadow:  -8px -8px 16px #c7c7c7,
+             8px 8px 16px #f9f9f9;
+    font-size: 1rem !important;
+}
+
+/* .card-boxes .card:hover .card-title{
+    font-size: 1.7rem !important;
+} */
+
+.card-boxes .custom-card-1.card:hover {
+    /* background: #e0e0e0; */
+    box-shadow:  -8px -8px 16px rgb(250, 163, 163),
+             8px 8px 16px #f9f9f9;
+}
+
+
+.card-boxes .card.custom-card-1,
+.custom-card-2,
+.custom-card-3,
+.custom-card-4 {
+    border-radius: 20px;
+    background-color: rgb(223, 103, 103);
+    color: white;
+    height: 110px;
+    border: 1px solid rgb(223, 103, 103);
+    box-shadow: 0 0 5px 0 rgb(223, 103, 103);
+}
+
+.custom-card-text {
+    font-size: .7rem;
+}
+
+.custom-card-text.extra {
+    font-size: .9rem;
+    border-top: .5px solid white;
+    padding-top: 5px;
+}
+
+.custom-card-3,
+.custom-card-4 {
+    height: 200px !important;
+    border-radius: 20px !important;
+    background-color: white !important;
+    border: 1px solid white !important;
+    box-shadow: 0 0 5px 0 rgb(221, 216, 216);
+    height: 130px;
+}
+
+.custom-card-4 {
+    height: 210px !important;
+}
+
+.custom-card-2 {
+    border: 1px solid white !important;
+    background-color: white !important;
+    color: rgb(223, 103, 103);
+    box-shadow: 0 0 5px 0 rgb(221, 216, 216);
+}
+
+.circle-btn-effects {
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.circle-btn-effects:hover {
+    cursor: pointer;
+    background-color: rgb(221, 216, 216);
+}
+
+/* #chart-sales-report{
+    padding: 5px 10px !important;
+    height: 140px !important;
+} */
+
+#chart-monthly-trans{
+    height: 120px !important;
+}
+
+#chart-invoice-raised{
+    height: 130px !important;
+}
+
+
+@media (min-width: 1920px){
+    .custom-card-1,
+    .custom-card-2,
+    .custom-card-3,
+    .custom-card-4 {
+        height: 150px;
+    }
+    .custom-card-text, .custom-card-text.extra{
+        margin-top: 40px !important;
+    }
+
+    .custom-card-3{
+        height: 220px !important;
+    }
+
+    .custom-card-4{
+        height: 260px !important;
+    }
+
+
+    /* #chart-sales-report{
+        margin: 5px 30px !important;
+        height: 180px !important;
+    } */
+    
+    #chart-monthly-trans{
+        height: 150px !important;
+    }
+    
+    #chart-invoice-raised{
+        height: 140px !important;
+    }
+}

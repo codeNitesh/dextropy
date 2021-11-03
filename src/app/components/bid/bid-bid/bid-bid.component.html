@@ -1,0 +1,66 @@
+<section>
+    {{biddingData.bidPrice}}
+    <form class="form">
+        <div class="row w-600">
+            <div class="col-6">
+                <label for="bid_price">Bid Price</label>
+                <input matInput [(ngModel)]="biddingData.bidPrice" name="bidPrice" required>
+                <!-- <input type="text" id="bid_price"> -->
+                <span class="hint-text">Optional</span>
+            </div>
+            <div class="col-6">
+                <label for="eta_after_completion">ETA for Completion</label>
+                <input matInput [(ngModel)]="biddingData.eta_for_completion" name="eta_after_completion" required>
+                <span class="hint-text">In #days after issuance of PO</span>
+            </div>
+
+            <div class="col-12 pt-5 pb-4"><h5 style="color: rgb(223, 103, 103);">Plan of Execution</h5></div>
+
+            <div class="row" *ngFor="let quote of biddingData.plan_of_execution">
+                <div class="col-6">
+                    <label for="milestone">Select Milestone</label>
+                    <select [(ngModel)]="quote.milestone" name="milestone">
+                        <option>Raw Material Requirement</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <span class="hint-text">Demo helper text</span>
+                </div>
+                <div class="col-6">
+                    <label for="milestone">ETA</label>
+                    <input matInput [(ngModel)]="quote.eta" name="eta_after_completion" required>
+                    <span class="hint-text">Optional</span>
+                </div>
+            </div>
+            
+
+            <button (click)="addNewMilestone()" style="width: 100px;" class="m-2 mt-3 btn btn-dext shadow">Add</button>
+        </div>
+        <div class="row pt-4">
+            <div class="col-12 m-1920">
+                <label for="milestone">QC Certificate</label>
+                <div class="custom-download-box m-1920">
+                    <span style="color: rgb(223, 103, 103);" class="item">Upload Files</span>
+                    <span class="dotted-line-box item">Drag and drop here or <span style="color: rgb(223, 103, 103);">browse</span></span>
+                    <span class="item"><button class="btn btn-dext">Browse</button></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row pt-4">
+            <div class="col-12 pb-2 m-1920"><h5 style="color: rgb(223, 103, 103);">Terms & Conditions</h5></div>
+
+            <div class="col-12 m-1920">
+                <input class="custom-checkbox" type="checkbox" id="t&c" name="t&c" value="Cutting">
+                <label style="color: black;" for="vehicle1">Cutting</label><br>
+            </div>
+        </div>
+
+    </form>
+</section>
+
+<section class="d-flex justify-content-end align-items-center">
+    <button class="btn btn-dext btn-grey sharp p-2 m-2">Don't Bid</button>
+    <button href="#" class="btn btn-dext sharp p-2 m-2 mr-0">Respond with Bid</button>
+</section>

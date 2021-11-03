@@ -1,0 +1,30 @@
+.span-pad-30 {
+    padding-right: 30px;
+}
+
+.table-fixed tbody {
+    min-height: fit-content;
+    max-height: 250px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+th {
+    color: white;
+    background-color: rgb(223, 103, 103) !important;
+}
+
+.table-fixed thead,
+.table-fixed tbody,
+.table-fixed tr,
+.table-fixed td,
+.table-fixed th {
+    display: block;
+}
+
+.table-fixed tbody td,
+.table-fixed tbody th,
+.table-fixed thead>tr>th {
+    float: left;
+    position: relative;
+}

@@ -1,0 +1,150 @@
+.order-tracking-display-profile{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.available-buttons button{
+    margin-left: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.available-buttons button span{
+    padding-left: 10px;
+}
+
+
+.cardbox-section{
+    font-size: .7rem;
+}
+
+.cardbox-section p{
+    padding: 0;
+    margin: 0;
+}
+
+.cardbox{
+    height: 120px;
+    color: white;
+    padding: 10px;
+    background-color: rgb(159, 159, 159);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.card-flex-end{
+    justify-content: flex-end;
+}
+
+.cardbox.completed{
+    background-color: rgb(106, 189, 105);
+}
+
+.cardbox.delayed{
+    background-color: red;
+}
+
+.click-card{
+    cursor: pointer;
+}
+
+.not-clickable{
+    cursor: not-allowed !important;
+}
+
+
+
+.timeline-card{
+    padding: 10px 30px;
+    background-color: rgb(188, 203, 186);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.timeline-options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, rgb(223, 103, 103) 25%, lightgray 25%);
+    background-color: orange;
+    height: 10px;
+    margin: 20px 40px;
+}
+.timeline-options-value-1{
+    margin: 0 10px;
+    text-align: center;
+    color: black;
+    font-size: .7rem;
+}
+
+.timeline-options-value-2{
+    margin: 0 20px;
+    text-align: center;
+    color: black;
+    font-size: .7rem;
+}
+
+.timeline-options .option{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 3px solid rgb(223, 103, 103);
+    background-color: rgb(188, 203, 186);
+}
+
+.timeline-options .option.done{
+    background-color: rgb(223, 103, 103);
+}
+
+/* For slider  */
+.next-prev>a {
+    color: rgb(223, 103, 103) !important;
+}
+
+.next-prev>a:hover {
+    text-decoration: underline !important;
+    text-underline-offset: 10px;
+}
+
+.carousel-silder-docs {
+    padding: 20px 0;
+    background-color: inherit;
+    border-radius: 20px;
+}
+
+.carousel-item .card .card-body .card {
+    border-radius: 10px;
+    width: 100%;
+    height: 100px;
+}
+
+
+@media (min-width: 1920px) {
+    .cardbox-section{
+        font-size: .9rem;
+    }
+    .cardbox{
+        height: 150px;
+        color: white;
+        padding: 15px;
+        background-color: rgb(159, 159, 159);
+        border-radius: 15px;
+    }
+
+    .timeline-card{
+        background-color: rgb(188, 203, 186);
+    }
+
+    .carousel-item .card .card-body .card {
+        border-radius: 10px;
+        width: 100%;
+        height: 180px;
+    }
+    
+}

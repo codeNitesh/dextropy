@@ -1,0 +1,143 @@
+<section>
+    <h3 class="header"><i class="bi-circle me-2"></i> Supplier Profile</h3>
+</section>
+<section>
+    <form class="form" [formGroup]="userForm">
+        <div class="row pb-3">
+            <div class="col-6 mb-3">
+                <label for="first_name">First Name</label>
+                <input matInput placeholder="Rakesh" [(ngModel)]="user.firstName" name="firstName" formControlName="firstName" required>
+            </div>
+            <div class="col-6 mb-3">
+                <label for="last_name">Last Name</label>
+                <input matInput placeholder="Sharma" [(ngModel)]="user.lastName" name="lastName" formControlName="lastName" required>
+            </div>
+            <div class="col-4 mb-3">
+                <label for="company_name">Company Name</label>
+                <input matInput placeholder="E Corp" [(ngModel)]="user.companyName" name="companyName" formControlName="companyName" required>
+            </div>
+
+            <div class="col-4 mb-3">
+                <label for="business_type">Select Business Type</label>
+                <mat-form-field appearance="legacy" [color]="'warn'" class="field-width-full">
+                    <mat-select [(ngModel)]="user.businessType" name="businessType" formControlName="businessType">
+                        <mat-option *ngFor="let btype of businessType" [value]="btype">{{btype}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-4 mb-3">
+                <label for="mobile_number">Mobile Number</label>
+                <input matInput [(ngModel)]="user.mobile" name="mobile" formControlName="mobile" required>
+            </div>
+            <div class="col-8 mb-3">
+                <label for="website">Website</label>
+                <input matInput placeholder="Ex. www.dcorp.net" [(ngModel)]="user.website" name="website" formControlName="website">
+            </div>
+            <div class="col-4 mb-3">
+                <label for="payment_method">Payment Method</label>
+                <mat-form-field appearance="legacy" [color]="'warn'" class="field-width-full">
+                    <mat-select [(ngModel)]="user.paymentMethods" name="paymentMethods" multiple [ngModelOptions]="{standalone: true}">
+                        <mat-option *ngFor="let method of paymentMethodList" [value]="method.key">{{method.name}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-3 mb-3"> 
+                <label for="pan_no">PAN No.</label>
+                <input [(ngModel)]="user.pan" name="pan" matInput placeholder="Eg. ABCDE1234F" formControlName="pan">
+            </div>
+            <div class="col-3 mb-3"> 
+                <label for="gstin">GSTIN</label>
+                <input [(ngModel)]="user.gstin" name="gstin" matInput placeholder="Eg. 06BZAHM6385P6Z2" formControlName="gstin">
+            </div>
+            <div class="col-3 mb-3"> 
+                <label for="cin">CIN</label>
+                <input [(ngModel)]="user.cin" name="cin" matInput [ngModelOptions]="{standalone: true}">
+                <span class="hint-text">Company Identification Number</span>
+            </div>
+            <div class="col-3 mb-3"> 
+                <label for="yoi">Year of Incorporation</label>
+                <input type="number" id="yoi" placeholder="Ex. 2001">
+            </div>
+
+            <div class="col-12 mb-3">
+                <label for="msme">Upload MSME Certificate/Udyog Aadhar</label>
+                <div class="custom-download-box mt-3">
+                    <span style="color: rgb(223, 103, 103);" class="item">Upload Files</span>
+                    <span class="dotted-line-box item">Drag and drop here or <span style="color: rgb(223, 103, 103);">browse</span></span>
+                    <span class="item"><button class="btn btn-dext">Browse</button></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h5>Registered Address</h5>
+                <div class="row pt-2">
+                    <div class="col-12 pb-3"> 
+                        <label for="addLine1">Address Line 1</label>
+                        <input [(ngModel)]="this.user.registeredAddress[registeredAddressPageIndex].addressLine1" name="addressLine1" matInput placeholder="Ex. 100 Main St" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-12 pb-3"> 
+                        <label for="addLine2">Address Line 2</label>
+                        <input [(ngModel)]="this.user.registeredAddress[registeredAddressPageIndex].addressLine2" name="addressLine2" matInput [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-6 pb-3"> 
+                        <label for="street">Street</label>
+                        <input [(ngModel)]="this.user.registeredAddress[registeredAddressPageIndex].street" name="street" matInput placeholder="Ex. San Francisco" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-6 pb-3"> 
+                        <label for="city">City</label>
+                        <input [(ngModel)]="this.user.registeredAddress[registeredAddressPageIndex].city" name="city" matInput placeholder="Ex. San Francisco" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-6 pb-3"> 
+                        <label for="country">Country</label>
+                        <input [(ngModel)]="this.user.registeredAddress[registeredAddressPageIndex].country" name="country" matInput placeholder="Ex. California" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-6 pb-3"> 
+                        <label for="pincode">Pincode</label>
+                        <input [(ngModel)]="this.user.registeredAddress[registeredAddressPageIndex].pincode" name="pincode" matInput #postalCode1 maxlength="6" placeholder="Ex. 942105" value="94043" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <mat-paginator style="background-color: rgb(248, 246, 246);" [length]="this.user.registeredAddress.length" [pageSize]="registeredAddressPageSize" [pageIndex]="registeredAddressPageIndex" (page)="registeredAddressPageEvent($event)">
+                </mat-paginator>
+                <button (click)="addNewRegisteredAddress()" class="btn btn-dext mt-3">Add More Billing Address</button>
+            </div>
+            <div class="col-6">
+                <h5>Workshop Address</h5>
+                <div class="row pt-2">
+                    <div class="col-12 pb-3"> 
+                        <label for="addLine1">Address Line 1</label>
+                        <input [(ngModel)]="this.user.workshopAddress[workshopAddressPageIndex].addressLine1" name="addressLine1" matInput placeholder="Ex. 100 Main St" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-12 pb-3"> 
+                        <label for="addLine2">Address Line 2</label>
+                        <input [(ngModel)]="this.user.workshopAddress[workshopAddressPageIndex].addressLine2" name="addressLine2" matInput [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-6 pb-3"> 
+                        <label for="street">Street</label>
+                        <input [(ngModel)]="this.user.workshopAddress[workshopAddressPageIndex].street" name="street" matInput placeholder="Ex. San Francisco" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-6 pb-3"> 
+                        <label for="city">City</label>
+                        <input [(ngModel)]="this.user.workshopAddress[workshopAddressPageIndex].city" name="city" matInput placeholder="Ex. San Francisco" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-6 pb-3"> 
+                        <label for="country">Country</label>
+                        <input [(ngModel)]="this.user.workshopAddress[workshopAddressPageIndex].country" name="country" matInput placeholder="Ex. California" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-6 pb-3"> 
+                        <label for="pincode">Pincode</label>
+                        <input [(ngModel)]="this.user.workshopAddress[workshopAddressPageIndex].pincode" name="pincode" matInput #postalCode2 maxlength="6" placeholder="Ex. 942105" value="94043" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+
+                <mat-paginator style="background-color: rgb(248, 246, 246);" [length]="this.user.workshopAddress.length" [pageSize]="workshopAddressPageSize" [pageIndex]="workshopAddressPageIndex" (page)="workshopAddressPageEvent($event)">
+                </mat-paginator>
+                <button (click)="addNewWorkshopAddress()" class="btn btn-dext mt-3">Add More Shipping Address</button>
+            </div>
+        </div>
+    </form>
+</section>
+
+<section class="bid-action-btns btn-end">
+    <button class="btn btn-dext sharp">Save</button>
+</section>

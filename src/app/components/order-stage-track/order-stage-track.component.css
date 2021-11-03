@@ -1,0 +1,53 @@
+.cardbox{
+    height: 120px;
+    color: white;
+    padding: 10px;
+    background-color: rgb(159, 159, 159);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.timeline-card{
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(196 225 186);
+}
+
+.timeline-options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, rgb(223, 103, 103) 25%, lightgray 25%);
+    background-color: orange;
+    height: 10px;
+    margin: 20px 40px;
+}
+.timeline-options-value-1{
+    margin: 0 10px;
+    text-align: center;
+    color: black;
+    font-size: .7rem;
+}
+
+.timeline-options-value-2{
+    margin: 0 20px;
+    text-align: center;
+    color: black;
+    font-size: .7rem;
+}
+
+.timeline-options .option{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 3px solid rgb(223, 103, 103);
+    background-color: rgb(188, 203, 186);
+}
+
+.timeline-options .option.done{
+    background-color: rgb(223, 103, 103);
+}

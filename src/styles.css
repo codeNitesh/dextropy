@@ -1,0 +1,203 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+@font-face {
+    font-family: "Comfortaa";
+    src: url("./assets/Comfortaa-VariableFont_wght.ttf") format("truetype");
+}
+
+:root{
+    --theme-color: rgb(223, 103, 103);
+    --grayish-color: gray;
+}
+
+* {
+    font-family: Comfortaa;
+    text-decoration: none !important;
+    list-style: none !important;
+}
+
+
+
+p{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p {
+    font-weight: 300 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: var(--theme-color);
+}
+
+.header{
+    color: var(--theme-color);
+    font-weight:bolder !important
+}
+
+.sub-header{
+    color: var(--grayish-color);
+}
+
+section {
+    padding: 20px;
+}
+
+
+
+
+/* For form */
+
+.form label{
+    color: rgb(223, 103, 103);
+}
+
+.form input, .form select{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(143, 143, 143);;
+    background-color: rgb(248, 246, 246);
+    padding: .4rem;
+    margin-top: .5rem;
+}
+
+.form input:focus{
+    border-bottom: 2px solid rgb(223, 103, 103);
+}
+
+.form select{
+    background-color: white;
+    border-radius: 5px;
+    border: 1.5px solid rgb(223, 103, 103);;
+    margin-top: .8rem;
+}
+
+.hint-text{
+    color: var(--grayish-color);
+    font-size: .7rem;
+}
+
+.light-text{
+    color: var(--grayish-color);
+    font-size: .8rem;
+    margin: 0;
+}
+
+.custom-checkbox{
+    width: auto !important;
+    margin-right: 10px;
+}
+
+/* For Button syling  */
+.btn.btn-dext {
+    color: white;
+    background-color: rgb(223, 103, 103);
+    border-radius: 1rem;
+    box-shadow: 0 0 5px 0 white;
+    border: 1px solid white;
+}
+.btn.btn-dext.sharp{
+    border-radius: 0rem;
+}
+
+.btn-end{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn.btn-dext:hover {
+    color: rgb(223, 103, 103);
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px 0 white;
+    border: 1px solid rgb(223, 103, 103);
+}
+
+/* For Download Box  */
+.custom-download-box{
+    height: auto;
+    width: 100%;
+    background-color: white;
+    border-radius: .5rem;
+    padding: 1.3rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-download-box .item{
+    margin: 0 .5rem;
+}
+
+
+.dotted-line-box{
+    padding: 1rem 3rem;
+    border: 2px dashed rgb(223, 103, 103);
+    border-radius: 1rem;
+}
+
+
+/* Colors  */
+.dext-theme-color {
+    background: rgb(223, 103, 103) !important;
+}
+
+.theme-color {
+    color: rgb(223, 103, 103) !important;
+}
+
+.color-black {
+    color: black;
+}
+
+.bg-black-grey {
+    background-color: rgb(114, 78, 78);
+}
+
+.text-grey {
+    color: rgb(122, 132, 166);
+}
+
+.white-color {
+    color: whitesmoke;
+}
+
+.bi-caret-right {
+    padding-left: 60px
+}
+
+.bg-blue {
+    background-color: blue !important;
+}
+
+.bg-red {
+    background-color: red !important;
+}
+
+.bg-yellow {
+    background-color: yellow !important;
+}
+
+.bg-green {
+    background-color: green !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

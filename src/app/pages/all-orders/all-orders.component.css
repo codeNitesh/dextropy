@@ -1,0 +1,76 @@
+.available-buttons button{
+    margin-left: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.available-buttons button span{
+    padding-left: 10px;
+}
+
+.search-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-section .search-input{
+    border: none;
+    width: calc(100% - 30px);
+    outline: none;
+    background-color: inherit;
+    border-bottom: 1px solid rgb(223, 103, 103);
+}
+
+.capsules-card{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 0 0 5px 0 rgb(207, 210, 211);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.capsule{
+    background-color: rgb(237, 242, 249);
+    width: auto;
+    margin: 10px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border: none;
+    color: rgb(117, 146, 249);
+    cursor: pointer;
+}
+
+.capsule.capsule-selected{
+    background-color: rgb(192, 205, 253);
+    border: 1px solid rgb(37, 48, 251);
+}
+
+
+.table-style{
+    font-size: .9rem;
+}
+
+.table-style thead tr th{
+    /* color: grey; */
+    border-bottom: none;
+    padding-bottom: 20px
+}
+
+.table-style thead tr th[scope="col"]{
+    font-size: .8rem;
+}
+
+.table-style tbody tr td{
+    padding-bottom: 20px !important;
+    color: grey !important;
+}
+
+.action-icons{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
