@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { OrderStageTrackComponent } from './order-stage-track.component';
 
@@ -6,7 +6,7 @@ describe('OrderStageTrackComponent', () => {
   let component: OrderStageTrackComponent;
   let fixture: ComponentFixture<OrderStageTrackComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ OrderStageTrackComponent ]
     })
