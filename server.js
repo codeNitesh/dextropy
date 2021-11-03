@@ -1,17 +1,14 @@
-
-//Install express server
 const express = require('express');
 const path = require('path');
-
 const app = express();
 
-// Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/angularapp'));
+// Serve static files....
+app.use(express.static(__dirname + '/dist/frontend-dextropy'));
 
-app.get('/*', function(req,res) {
-    
-res.sendFile(path.join(__dirname+'/angularapp/index.html'));
+// Send all requests to index.html
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/frontend-dextropy/index.html'));
 });
 
-// Start the app by listening on the default Heroku port
-app.listen(process.env.PORT || 8080);
+// default Heroku PORT
+app.listen(process.env.PORT || 3000);

@@ -8,13 +8,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --output-path angularapp --aot --prod"
+    "postinstall": "ng build --aot --prod"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~10.0.0",
     "@angular/cdk": "^10.2.7",
-    "@angular/cli": "^12.2.12",
     "@angular/common": "~10.0.0",
     "@angular/compiler": "~10.0.0",
     "@angular/compiler-cli": "~10.0.0",
@@ -35,7 +34,6 @@
     "popper.js": "^1.16.1",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
-    "typescript": "~3.9.5",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
@@ -57,9 +55,5 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.9.5"
-  },
-  "engines": {
-    "node": "v14.15.1",
-    "npm": "8.1.1"
   }
 }
